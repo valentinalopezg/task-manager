@@ -1,0 +1,50 @@
+// This is where I put global styles and charge variables values 
+
+// Import Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700');
+
+// 💜 Custom Colors
+$lavender: #a27bff;         // lavanda suave
+$violet: #7d4fff;           // violeta intenso
+$light-violet: #cdb3ff;     // violeta pastel
+$dark-purple: #4b23b8;      // morado oscuro elegante
+$light: #f8f8f8;
+
+// 🪄 Bulma overrides (antes del import)
+$family-sans-serif: "Nunito", sans-serif;
+$primary: $violet;
+$link: $light-violet;
+$info: $dark-purple;
+
+// Inputs y bordes más limpios
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// 🧩 Importar Bulma después de definir variables
+@import "../node_modules/bulma/bulma";
+
+// 🎨 Override de variables CSS Bulma (para asegurar morados)
+:root {
+  /* Tono base: 266° → morado violeta */
+  --bulma-primary-h: 266;
+  --bulma-primary-s: 95%;
+  --bulma-primary-l: 64%;
+
+  --bulma-link-h: 272; 
+  --bulma-link-s: 90%;
+  --bulma-link-l: 75%;
+
+  --bulma-info-h: 260;
+  --bulma-info-s: 100%;
+  --bulma-info-l: 55%;
+}
+
+// 🌅 Global styles
+html {
+  background: linear-gradient(to right top, $lavender, $violet);
+}
+
+html, body {
+  height: 100%;
+}
